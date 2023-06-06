@@ -9,48 +9,9 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State private var selectedIndex : Int = 0
-    private let categories = ["All","Chair","Sofa","Lamp","Kitchen","Table"]
     var body: some View {
-        ZStack {
-            Color("Bg").edgesIgnoringSafeArea(.all)
-            ScrollView{
-                VStack(alignment: .leading){
-                    AppBarView()
-                    TagLineView().padding()
-                    SearchAndScanView()
-                    ScrollView(.horizontal , showsIndicators: false){
-                        HStack {
-                            ForEach(categories.indices, id: \.self) {i in
-                                CategoryView(isActive: i == selectedIndex, text: categories[i]).onTapGesture {
-                                    selectedIndex = i
-                                }
-                            }
-                        }.padding()
-                    }
-                    Text("Popular").font(.custom("RobotoConsensed-Bold", size: 24)).padding(.horizontal)
-                    
-                    ScrollView (.horizontal, showsIndicators: false){
-                        HStack {
-                            ForEach(0 ..< 4) { item in
-                                ProductCardView(image: Image("chair_\(item + 1)"), size: 210)
-                            }.padding(.trailing)
-                        }.padding(.leading)
-                    }
-                    
-                    Text("Best").font(.custom("RobotoConsensed-Bold", size: 24)).padding(.horizontal).padding(.top)
-                    
-                    ScrollView (.horizontal, showsIndicators: false){
-                        HStack {
-                            ForEach(0 ..< 4) { item in
-                                ProductCardView(image: Image("chair_\(item + 1)"), size: 180)
-                            }.padding(.trailing)
-                        }.padding(.leading)
-                    }
-                  
-                }
-            }
-           
+        VStack {
+            HomeScreen()
         }
     }
     
@@ -128,3 +89,15 @@ struct ProductCardView: View {
         }.frame(width: size).padding().background(.white).cornerRadius(20)
     }
 }
+
+struct BottomNavBarItem: View {
+    let image : Image
+    let action : () -> Void
+    var body: some View {
+        Button(action: action, label: {
+            image.resizable().frame(width: 30,height: 30).frame(maxWidth:.infinity)
+        })
+    }
+}
+
+

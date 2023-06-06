@@ -18,6 +18,7 @@
 		253D12902A27705000FFF47E /* swift_furniture_shopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D128F2A27705000FFF47E /* swift_furniture_shopUITestsLaunchTests.swift */; };
 		253D12A02A277C1D00FFF47E /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 253D129F2A277C1D00FFF47E /* RobotoCondensed-Bold.ttf */; };
 		253D12A22A277C3C00FFF47E /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 253D12A12A277C3C00FFF47E /* RobotoCondensed-Regular.ttf */; };
+		2580A0E52A2F4F1C002F21D5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2580A0E42A2F4F1C002F21D5 /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		253D129F2A277C1D00FFF47E /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		253D12A12A277C3C00FFF47E /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		253D12A32A277CAD00FFF47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2580A0E42A2F4F1C002F21D5 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		253D126C2A27705000FFF47E /* swift-furniture-shop */ = {
 			isa = PBXGroup;
 			children = (
+				2580A0E32A2F4EF3002F21D5 /* Screens */,
 				253D12A32A277CAD00FFF47E /* Info.plist */,
 				253D129C2A277AD900FFF47E /* Fonts */,
 				253D126D2A27705000FFF47E /* swift_furniture_shopApp.swift */,
@@ -147,6 +150,14 @@
 				253D12A12A277C3C00FFF47E /* RobotoCondensed-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2580A0E32A2F4EF3002F21D5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2580A0E42A2F4F1C002F21D5 /* HomeScreen.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				253D12772A27705000FFF47E /* Persistence.swift in Sources */,
+				2580A0E52A2F4F1C002F21D5 /* HomeScreen.swift in Sources */,
 				253D12702A27705000FFF47E /* ContentView.swift in Sources */,
 				253D127A2A27705000FFF47E /* swift_furniture_shop.xcdatamodeld in Sources */,
 				253D126E2A27705000FFF47E /* swift_furniture_shopApp.swift in Sources */,
