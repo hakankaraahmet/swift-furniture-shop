@@ -14,21 +14,43 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color("Bg").edgesIgnoringSafeArea(.all)
-            VStack(alignment: .leading){
-                AppBarView()
-                TagLineView().padding()
-                SearchAndScanView()
-                ScrollView(.horizontal , showsIndicators: false){
-                    HStack {
-                        ForEach(categories.indices, id: \.self) {i in
-                            CategoryView(isActive: i == selectedIndex, text: categories[i]).onTapGesture {
-                                selectedIndex = i
+            ScrollView{
+                VStack(alignment: .leading){
+                    AppBarView()
+                    TagLineView().padding()
+                    SearchAndScanView()
+                    ScrollView(.horizontal , showsIndicators: false){
+                        HStack {
+                            ForEach(categories.indices, id: \.self) {i in
+                                CategoryView(isActive: i == selectedIndex, text: categories[i]).onTapGesture {
+                                    selectedIndex = i
+                                }
                             }
-                        }
-                    }.padding()
+                        }.padding()
+                    }
+                    Text("Popular").font(.custom("RobotoConsensed-Bold", size: 24)).padding(.horizontal)
+                    
+                    ScrollView (.horizontal, showsIndicators: false){
+                        HStack {
+                            ForEach(0 ..< 4) { item in
+                                ProductCardView(image: Image("chair_\(item + 1)"), size: 210)
+                            }.padding(.trailing)
+                        }.padding(.leading)
+                    }
+                    
+                    Text("Best").font(.custom("RobotoConsensed-Bold", size: 24)).padding(.horizontal).padding(.top)
+                    
+                    ScrollView (.horizontal, showsIndicators: false){
+                        HStack {
+                            ForEach(0 ..< 4) { item in
+                                ProductCardView(image: Image("chair_\(item + 1)"), size: 180)
+                            }.padding(.trailing)
+                        }.padding(.leading)
+                    }
+                  
                 }
-
             }
+           
         }
     }
     
@@ -86,5 +108,23 @@ struct CategoryView: View {
             isActive ? Color("PrimaryColor").frame(width: 15, height: 2).clipShape(Capsule()) : nil
             
         }.padding(.trailing)
+    }
+}
+
+struct ProductCardView: View {
+    let image : Image
+    let size : CGFloat
+    var body: some View {
+        VStack{
+            image.resizable().frame(width: size, height: 200 * (size/210)).cornerRadius(20)
+            Text("Luxury Swedian chair").font(.title3).fontWeight(.bold)
+            HStack(spacing: 2){
+                ForEach(0..<5){i in
+                    Image("star")
+                }
+                Spacer()
+                Text("$1299").font(.title3).fontWeight(.bold)
+            }
+        }.frame(width: size).padding().background(.white).cornerRadius(20)
     }
 }
