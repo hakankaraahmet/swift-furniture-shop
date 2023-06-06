@@ -17,12 +17,17 @@ struct ContentView: View {
     
 }
 
+
+
+// MARK: - ContentView
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
 
+// MARK: - Other Views
 struct AppBarView: View {
     var body: some View {
         HStack {
@@ -99,5 +104,7 @@ struct BottomNavBarItem: View {
         })
     }
 }
+
+
 
 
