@@ -16,6 +16,8 @@
 		253D12842A27705000FFF47E /* swift_furniture_shopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D12832A27705000FFF47E /* swift_furniture_shopTests.swift */; };
 		253D128E2A27705000FFF47E /* swift_furniture_shopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D128D2A27705000FFF47E /* swift_furniture_shopUITests.swift */; };
 		253D12902A27705000FFF47E /* swift_furniture_shopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D128F2A27705000FFF47E /* swift_furniture_shopUITestsLaunchTests.swift */; };
+		253D12A02A277C1D00FFF47E /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 253D129F2A277C1D00FFF47E /* RobotoCondensed-Bold.ttf */; };
+		253D12A22A277C3C00FFF47E /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 253D12A12A277C3C00FFF47E /* RobotoCondensed-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		253D12892A27705000FFF47E /* swift-furniture-shopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-furniture-shopUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		253D128D2A27705000FFF47E /* swift_furniture_shopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_furniture_shopUITests.swift; sourceTree = "<group>"; };
 		253D128F2A27705000FFF47E /* swift_furniture_shopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_furniture_shopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		253D129F2A277C1D00FFF47E /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		253D12A12A277C3C00FFF47E /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		253D12A32A277CAD00FFF47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +103,8 @@
 		253D126C2A27705000FFF47E /* swift-furniture-shop */ = {
 			isa = PBXGroup;
 			children = (
+				253D12A32A277CAD00FFF47E /* Info.plist */,
+				253D129C2A277AD900FFF47E /* Fonts */,
 				253D126D2A27705000FFF47E /* swift_furniture_shopApp.swift */,
 				253D126F2A27705000FFF47E /* ContentView.swift */,
 				253D12712A27705000FFF47E /* Assets.xcassets */,
@@ -131,6 +138,15 @@
 				253D128F2A27705000FFF47E /* swift_furniture_shopUITestsLaunchTests.swift */,
 			);
 			path = "swift-furniture-shopUITests";
+			sourceTree = "<group>";
+		};
+		253D129C2A277AD900FFF47E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				253D129F2A277C1D00FFF47E /* RobotoCondensed-Bold.ttf */,
+				253D12A12A277C3C00FFF47E /* RobotoCondensed-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +253,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253D12A02A277C1D00FFF47E /* RobotoCondensed-Bold.ttf in Resources */,
 				253D12752A27705000FFF47E /* Preview Assets.xcassets in Resources */,
+				253D12A22A277C3C00FFF47E /* RobotoCondensed-Regular.ttf in Resources */,
 				253D12722A27705000FFF47E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +445,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"swift-furniture-shop/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "swift-furniture-shop/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -455,6 +474,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"swift-furniture-shop/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "swift-furniture-shop/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
